@@ -69,328 +69,378 @@ namespace BerlinClock.BDD
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void TopYellowLampBlinksEvery2Seconds(string time, string converted_Time, string[] exampleTags)
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Midnight 00:00")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void Midnight0000()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Top Yellow Lamp Blinks Every 2 seconds", exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Midnight 00:00", ((string[])(null)));
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9
-testRunner.When(string.Format("the time is {0}", time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("the time is \"00:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
 #line 10
-testRunner.Then(string.Format("the clock should look like {0}", converted_Time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Yellow Lamp Blinks Every 2 seconds")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Middle of the afternoon")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopYellowLampBlinksEvery2Seconds_000000()
+        public virtual void MiddleOfTheAfternoon()
         {
-            this.TopYellowLampBlinksEvery2Seconds("\"00:00:00\"", "\"Y OOOO OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Yellow Lamp Blinks Every 2 seconds")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:00:01\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:00:01\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"O OOOO OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopYellowLampBlinksEvery2Seconds_000001()
-        {
-            this.TopYellowLampBlinksEvery2Seconds("\"00:00:01\"", "\"O OOOO OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Yellow Lamp Blinks Every 2 seconds")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:00:59\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:00:59\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"O OOOO OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopYellowLampBlinksEvery2Seconds_000059()
-        {
-            this.TopYellowLampBlinksEvery2Seconds("\"00:00:59\"", "\"O OOOO OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        public virtual void TopRowHoursLampLightsRedEvery5Hours(string time, string converted_Time, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Top Row Hours Lamp Lights Red Every 5 Hours", exampleTags);
-#line 18
-this.ScenarioSetup(scenarioInfo);
-#line 19
-testRunner.When(string.Format("the time is {0}", time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Middle of the afternoon", ((string[])(null)));
 #line 20
-testRunner.Then(string.Format("the clock should look like {0}", converted_Time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 21
+testRunner.When("the time is \"13:17:01\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 22
+testRunner.Then("the clock should look like", "O\nRROO\nRRRO\nYYROOOOOOOO\nYYOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Hours Lamp Lights Red Every 5 Hours")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Just before midnight")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"05:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"05:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y ROOO OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopRowHoursLampLightsRedEvery5Hours_050000()
+        public virtual void JustBeforeMidnight()
         {
-            this.TopRowHoursLampLightsRedEvery5Hours("\"05:00:00\"", "\"Y ROOO OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Hours Lamp Lights Red Every 5 Hours")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"10:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"10:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y RROO OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopRowHoursLampLightsRedEvery5Hours_100000()
-        {
-            this.TopRowHoursLampLightsRedEvery5Hours("\"10:00:00\"", "\"Y RROO OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Hours Lamp Lights Red Every 5 Hours")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"15:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"15:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y RRRO OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopRowHoursLampLightsRedEvery5Hours_150000()
-        {
-            this.TopRowHoursLampLightsRedEvery5Hours("\"15:00:00\"", "\"Y RRRO OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Hours Lamp Lights Red Every 5 Hours")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"20:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"20:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y RRRR OOOO OOOOOOOOOOO OOOO\"")]
-        public virtual void TopRowHoursLampLightsRedEvery5Hours_200000()
-        {
-            this.TopRowHoursLampLightsRedEvery5Hours("\"20:00:00\"", "\"Y RRRR OOOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        public virtual void BotomRowHoursLampLightsRedEveryHour(string time, string converted_Time, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Botom Row Hours Lamp Lights Red Every Hour", exampleTags);
-#line 29
-this.ScenarioSetup(scenarioInfo);
-#line 30
-testRunner.When(string.Format("the time is {0}", time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Just before midnight", ((string[])(null)));
 #line 31
-testRunner.Then(string.Format("the clock should look like {0}", converted_Time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+this.ScenarioSetup(scenarioInfo);
+#line 32
+testRunner.When("the time is \"23:59:59\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 33
+testRunner.Then("the clock should look like", "O\nRRRR\nRRRO\nYYRYYRYYRYY\nYYYY", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Botom Row Hours Lamp Lights Red Every Hour")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Midnight 24:00")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"01:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"01:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO ROOO OOOOOOOOOOO OOOO\"")]
-        public virtual void BotomRowHoursLampLightsRedEveryHour_010000()
+        public virtual void Midnight2400()
         {
-            this.BotomRowHoursLampLightsRedEveryHour("\"01:00:00\"", "\"Y OOOO ROOO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Botom Row Hours Lamp Lights Red Every Hour")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"02:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"02:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO RROO OOOOOOOOOOO OOOO\"")]
-        public virtual void BotomRowHoursLampLightsRedEveryHour_020000()
-        {
-            this.BotomRowHoursLampLightsRedEveryHour("\"02:00:00\"", "\"Y OOOO RROO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Botom Row Hours Lamp Lights Red Every Hour")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"03:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"03:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO RRRO OOOOOOOOOOO OOOO\"")]
-        public virtual void BotomRowHoursLampLightsRedEveryHour_030000()
-        {
-            this.BotomRowHoursLampLightsRedEveryHour("\"03:00:00\"", "\"Y OOOO RRRO OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Botom Row Hours Lamp Lights Red Every Hour")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"04:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"04:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO RRRR OOOOOOOOOOO OOOO\"")]
-        public virtual void BotomRowHoursLampLightsRedEveryHour_040000()
-        {
-            this.BotomRowHoursLampLightsRedEveryHour("\"04:00:00\"", "\"Y OOOO RRRR OOOOOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        public virtual void TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour(string time, string converted_Time, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Top Row Minutes Lamp Lights Red Every First Quarter, Half And Last Quarter Of An " +
-                    "Hour", exampleTags);
-#line 40
-this.ScenarioSetup(scenarioInfo);
-#line 41
-testRunner.When(string.Format("the time is {0}", time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Midnight 24:00", ((string[])(null)));
 #line 42
-testRunner.Then(string.Format("the clock should look like {0}", converted_Time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Minutes Lamp Lights Red Every First Quarter, Half And Last Quarter Of An " +
-            "Hour")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:15:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:15:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO YYROOOOOOOO OOOO\"")]
-        public virtual void TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour_001500()
-        {
-            this.TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour("\"00:15:00\"", "\"Y OOOO OOOO YYROOOOOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Minutes Lamp Lights Red Every First Quarter, Half And Last Quarter Of An " +
-            "Hour")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:30:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:30:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO YYRYYROOOOO OOOO\"")]
-        public virtual void TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour_003000()
-        {
-            this.TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour("\"00:30:00\"", "\"Y OOOO OOOO YYRYYROOOOO OOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Top Row Minutes Lamp Lights Red Every First Quarter, Half And Last Quarter Of An " +
-            "Hour")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:45:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:45:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO YYRYYRYYROO OOOO\"")]
-        public virtual void TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour_004500()
-        {
-            this.TopRowMinutesLampLightsRedEveryFirstQuarterHalfAndLastQuarterOfAnHour("\"00:45:00\"", "\"Y OOOO OOOO YYRYYRYYROO OOOO\"", ((string[])(null)));
-        }
-        
-        public virtual void BottomRowMinutesLampLightsYellowEveryMinute(string time, string converted_Time, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Bottom Row Minutes Lamp Lights Yellow Every Minute", exampleTags);
-#line 50
 this.ScenarioSetup(scenarioInfo);
-#line 51
-testRunner.When(string.Format("the time is {0}", time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
-testRunner.Then(string.Format("the clock should look like {0}", converted_Time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 43
+testRunner.When("the time is \"24:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 44
+testRunner.Then("the clock should look like", "Y\nRRRR\nRRRR\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Bottom Row Minutes Lamp Lights Yellow Every Minute")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Just after midnight 00:00:01")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:01:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:01:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO OOOOOOOOOOO YOOO\"")]
-        public virtual void BottomRowMinutesLampLightsYellowEveryMinute_000100()
+        public virtual void JustAfterMidnight000001()
         {
-            this.BottomRowMinutesLampLightsYellowEveryMinute("\"00:01:00\"", "\"Y OOOO OOOO OOOOOOOOOOO YOOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Bottom Row Minutes Lamp Lights Yellow Every Minute")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:02:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:02:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO OOOOOOOOOOO YYOO\"")]
-        public virtual void BottomRowMinutesLampLightsYellowEveryMinute_000200()
-        {
-            this.BottomRowMinutesLampLightsYellowEveryMinute("\"00:02:00\"", "\"Y OOOO OOOO OOOOOOOOOOO YYOO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Bottom Row Minutes Lamp Lights Yellow Every Minute")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:03:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:03:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO OOOOOOOOOOO YYYO\"")]
-        public virtual void BottomRowMinutesLampLightsYellowEveryMinute_000300()
-        {
-            this.BottomRowMinutesLampLightsYellowEveryMinute("\"00:03:00\"", "\"Y OOOO OOOO OOOOOOOOOOO YYYO\"", ((string[])(null)));
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Bottom Row Minutes Lamp Lights Yellow Every Minute")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"00:04:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"00:04:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y OOOO OOOO OOOOOOOOOOO YYYY\"")]
-        public virtual void BottomRowMinutesLampLightsYellowEveryMinute_000400()
-        {
-            this.BottomRowMinutesLampLightsYellowEveryMinute("\"00:04:00\"", "\"Y OOOO OOOO OOOOOOOOOOO YYYY\"", ((string[])(null)));
-        }
-        
-        public virtual void CorrectAreLightUp(string time, string converted_Time, string[] exampleTags)
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Correct are light up", exampleTags);
-#line 61
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Just after midnight 00:00:01", ((string[])(null)));
+#line 53
 this.ScenarioSetup(scenarioInfo);
-#line 62
-testRunner.When(string.Format("the time is {0}", time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 63
-testRunner.Then(string.Format("the clock should look like {0}", converted_Time), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 54
+testRunner.When("the time is \"00:00:01\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 55
+testRunner.Then("the clock should look like", "O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Correct are light up")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Just after midnight 00:00:59")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"07:22:02\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"07:22:02\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y ROOO RROO YYRYOOOOOOO YYOO\"")]
-        public virtual void CorrectAreLightUp_072202()
+        public virtual void JustAfterMidnight000059()
         {
-            this.CorrectAreLightUp("\"07:22:02\"", "\"Y ROOO RROO YYRYOOOOOOO YYOO\"", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Just after midnight 00:00:59", ((string[])(null)));
+#line 64
+this.ScenarioSetup(scenarioInfo);
+#line 65
+testRunner.When("the time is \"00:00:59\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 66
+testRunner.Then("the clock should look like", "O\nOOOO\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Correct are light up")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Morning 05:00:00")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"13:17:01\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"13:17:01\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"O RROO RRRO YYROOOOOOOO YYOO\"")]
-        public virtual void CorrectAreLightUp_131701()
+        public virtual void Morning050000()
         {
-            this.CorrectAreLightUp("\"13:17:01\"", "\"O RROO RRRO YYROOOOOOOO YYOO\"", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Morning 05:00:00", ((string[])(null)));
+#line 75
+this.ScenarioSetup(scenarioInfo);
+#line 76
+testRunner.When("the time is \"05:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 77
+testRunner.Then("the clock should look like", "Y\nROOO\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Correct are light up")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Morning 10:00:00")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"23:59:59\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"23:59:59\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"O RRRR RRRO YYRYYRYYRYY YYYY\"")]
-        public virtual void CorrectAreLightUp_235959()
+        public virtual void Morning100000()
         {
-            this.CorrectAreLightUp("\"23:59:59\"", "\"O RRRR RRRO YYRYYRYYRYY YYYY\"", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Morning 10:00:00", ((string[])(null)));
+#line 86
+this.ScenarioSetup(scenarioInfo);
+#line 87
+testRunner.When("the time is \"10:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 88
+testRunner.Then("the clock should look like", "Y\nRROO\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Correct are light up")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Afternoon 15:00:00")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "\"24:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:time", "\"24:00:00\"")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:converted_time", "\"Y RRRR RRRR OOOOOOOOOOO OOOO\"")]
-        public virtual void CorrectAreLightUp_240000()
+        public virtual void Afternoon150000()
         {
-            this.CorrectAreLightUp("\"24:00:00\"", "\"Y RRRR RRRR OOOOOOOOOOO OOOO\"", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Afternoon 15:00:00", ((string[])(null)));
+#line 97
+this.ScenarioSetup(scenarioInfo);
+#line 98
+testRunner.When("the time is \"15:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 99
+testRunner.Then("the clock should look like", "Y\nRRRO\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Evening 20:00:00")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void Evening200000()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Evening 20:00:00", ((string[])(null)));
+#line 108
+this.ScenarioSetup(scenarioInfo);
+#line 109
+testRunner.When("the time is \"20:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 110
+testRunner.Then("the clock should look like", "Y\nRRRR\nOOOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("After midnight 01:00:00")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void AfterMidnight010000()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("After midnight 01:00:00", ((string[])(null)));
+#line 119
+this.ScenarioSetup(scenarioInfo);
+#line 120
+testRunner.When("the time is \"01:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 121
+testRunner.Then("the clock should look like", "Y\nOOOO\nROOO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("After midnight 02:00:00")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void AfterMidnight020000()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("After midnight 02:00:00", ((string[])(null)));
+#line 130
+this.ScenarioSetup(scenarioInfo);
+#line 131
+testRunner.When("the time is \"02:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 132
+testRunner.Then("the clock should look like", "Y\nOOOO\nRROO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("After midnight 03:00:00")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void AfterMidnight030000()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("After midnight 03:00:00", ((string[])(null)));
+#line 141
+this.ScenarioSetup(scenarioInfo);
+#line 142
+testRunner.When("the time is \"03:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 143
+testRunner.Then("the clock should look like", "Y\nOOOO\nRRRO\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("After midnight 04:00:00")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void AfterMidnight040000()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("After midnight 04:00:00", ((string[])(null)));
+#line 152
+this.ScenarioSetup(scenarioInfo);
+#line 153
+testRunner.When("the time is \"04:00:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 154
+testRunner.Then("the clock should look like", "Y\nOOOO\nRRRR\nOOOOOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Quarter after midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void QuarterAfterMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quarter after midnight", ((string[])(null)));
+#line 163
+this.ScenarioSetup(scenarioInfo);
+#line 164
+testRunner.When("the time is \"00:15:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 165
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nYYROOOOOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Half an hour after midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void HalfAnHourAfterMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Half an hour after midnight", ((string[])(null)));
+#line 174
+this.ScenarioSetup(scenarioInfo);
+#line 175
+testRunner.When("the time is \"00:30:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 176
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nYYRYYROOOOO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Last quarter of midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void LastQuarterOfMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Last quarter of midnight", ((string[])(null)));
+#line 185
+this.ScenarioSetup(scenarioInfo);
+#line 186
+testRunner.When("the time is \"00:45:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 187
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nYYRYYRYYROO\nOOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("One minute after midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void OneMinuteAfterMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("One minute after midnight", ((string[])(null)));
+#line 196
+this.ScenarioSetup(scenarioInfo);
+#line 197
+testRunner.When("the time is \"00:01:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 198
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nYOOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Two minutes after midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void TwoMinutesAfterMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Two minutes after midnight", ((string[])(null)));
+#line 207
+this.ScenarioSetup(scenarioInfo);
+#line 208
+testRunner.When("the time is \"00:02:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 209
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nYYOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Three minutes after midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void ThreeMinutesAfterMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Three minutes after midnight", ((string[])(null)));
+#line 218
+this.ScenarioSetup(scenarioInfo);
+#line 219
+testRunner.When("the time is \"00:03:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 220
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nYYYO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Four minutes after midnight")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void FourMinutesAfterMidnight()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Four minutes after midnight", ((string[])(null)));
+#line 229
+this.ScenarioSetup(scenarioInfo);
+#line 230
+testRunner.When("the time is \"00:04:00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 231
+testRunner.Then("the clock should look like", "Y\nOOOO\nOOOO\nOOOOOOOOOOO\nYYYY", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Morning 07:22:02")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "The Berlin Clock")]
+        public virtual void Morning072202()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Morning 07:22:02", ((string[])(null)));
+#line 240
+this.ScenarioSetup(scenarioInfo);
+#line 241
+testRunner.When("the time is \"07:22:02\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 242
+testRunner.Then("the clock should look like", "Y\nROOO\nRROO\nYYRYOOOOOOO\nYYOO", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
         }
     }
 }

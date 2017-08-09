@@ -13,7 +13,7 @@ namespace BerlinClock
             var bottomRowHours = GetBottomRowHours(timeParts[0]);
             var topRowMinutes = GetTopRowMinutes(timeParts[1]);
             var bottomRowMinutes = GetBottomRowMinutes(timeParts[1]);
-            return String.Join(" ", seconds, topRowHours, bottomRowHours, topRowMinutes, bottomRowMinutes);
+            return String.Join("\n", seconds, topRowHours, bottomRowHours, topRowMinutes, bottomRowMinutes);
         }
 
         private string GetSeconds(int secondsPart)

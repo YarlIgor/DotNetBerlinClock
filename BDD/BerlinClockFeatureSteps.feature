@@ -5,66 +5,245 @@ Feature: The Berlin Clock
     So that I can increase the number of ways that I can read the time
 
 
-Scenario Outline: Top Yellow Lamp Blinks Every 2 seconds
-When the time is <time>
-Then the clock should look like <converted_time>
+Scenario: Midnight 00:00
+When the time is "00:00:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Examples: 
-| time       | converted_time |
-| "00:00:00" | "Y OOOO OOOO OOOOOOOOOOO OOOO"|
-| "00:00:01" | "O OOOO OOOO OOOOOOOOOOO OOOO"|
-| "00:00:59" | "O OOOO OOOO OOOOOOOOOOO OOOO"|
 
-Scenario Outline: Top Row Hours Lamp Lights Red Every 5 Hours
-When the time is <time>
-Then the clock should look like <converted_time>
+Scenario: Middle of the afternoon
+When the time is "13:17:01"
+Then the clock should look like
+"""
+O
+RROO
+RRRO
+YYROOOOOOOO
+YYOO
+"""
 
-Examples: 
-| time       | converted_time |
-| "05:00:00" | "Y ROOO OOOO OOOOOOOOOOO OOOO"|
-| "10:00:00" | "Y RROO OOOO OOOOOOOOOOO OOOO"|
-| "15:00:00" | "Y RRRO OOOO OOOOOOOOOOO OOOO"|
-| "20:00:00" | "Y RRRR OOOO OOOOOOOOOOO OOOO"|
+Scenario: Just before midnight
+When the time is "23:59:59"
+Then the clock should look like
+"""
+O
+RRRR
+RRRO
+YYRYYRYYRYY
+YYYY
+"""
 
-Scenario Outline: Botom Row Hours Lamp Lights Red Every Hour
-When the time is <time>
-Then the clock should look like <converted_time>
+Scenario: Midnight 24:00
+When the time is "24:00:00"
+Then the clock should look like
+"""
+Y
+RRRR
+RRRR
+OOOOOOOOOOO
+OOOO
+"""
 
-Examples: 
-| time       | converted_time |
-| "01:00:00" | "Y OOOO ROOO OOOOOOOOOOO OOOO"|
-| "02:00:00" | "Y OOOO RROO OOOOOOOOOOO OOOO"|
-| "03:00:00" | "Y OOOO RRRO OOOOOOOOOOO OOOO"|
-| "04:00:00" | "Y OOOO RRRR OOOOOOOOOOO OOOO"|
+Scenario: Just after midnight 00:00:01
+When the time is "00:00:01"
+Then the clock should look like
+"""
+O
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Scenario Outline: Top Row Minutes Lamp Lights Red Every First Quarter, Half And Last Quarter Of An Hour
-When the time is <time>
-Then the clock should look like <converted_time>
+Scenario: Just after midnight 00:00:59
+When the time is "00:00:59"
+Then the clock should look like
+"""
+O
+OOOO
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Examples: 
-| time       | converted_time |
-| "00:15:00" | "Y OOOO OOOO YYROOOOOOOO OOOO"|
-| "00:30:00" | "Y OOOO OOOO YYRYYROOOOO OOOO"|
-| "00:45:00" | "Y OOOO OOOO YYRYYRYYROO OOOO"|
+Scenario: Morning 05:00:00
+When the time is "05:00:00"
+Then the clock should look like
+"""
+Y
+ROOO
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Scenario Outline: Bottom Row Minutes Lamp Lights Yellow Every Minute
-When the time is <time>
-Then the clock should look like <converted_time>
+Scenario: Morning 10:00:00
+When the time is "10:00:00"
+Then the clock should look like
+"""
+Y
+RROO
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Examples: 
-| time       | converted_time |
-| "00:01:00" | "Y OOOO OOOO OOOOOOOOOOO YOOO"|
-| "00:02:00" | "Y OOOO OOOO OOOOOOOOOOO YYOO"|
-| "00:03:00" | "Y OOOO OOOO OOOOOOOOOOO YYYO"|
-| "00:04:00" | "Y OOOO OOOO OOOOOOOOOOO YYYY"|
+Scenario: Afternoon 15:00:00
+When the time is "15:00:00"
+Then the clock should look like
+"""
+Y
+RRRO
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Scenario Outline: Correct are light up
-When the time is <time>
-Then the clock should look like <converted_time>
+Scenario: Evening 20:00:00
+When the time is "20:00:00"
+Then the clock should look like
+"""
+Y
+RRRR
+OOOO
+OOOOOOOOOOO
+OOOO
+"""
 
-Examples: 
-| time       | converted_time                 |
-| "07:22:02" | "Y ROOO RROO YYRYOOOOOOO YYOO" |
-| "13:17:01" | "O RROO RRRO YYROOOOOOOO YYOO" |
-| "23:59:59" | "O RRRR RRRO YYRYYRYYRYY YYYY" |
-| "24:00:00" | "Y RRRR RRRR OOOOOOOOOOO OOOO" |
+Scenario: After midnight 01:00:00
+When the time is "01:00:00"
+Then the clock should look like
+"""
+Y
+OOOO
+ROOO
+OOOOOOOOOOO
+OOOO
+"""
+
+Scenario: After midnight 02:00:00
+When the time is "02:00:00"
+Then the clock should look like
+"""
+Y
+OOOO
+RROO
+OOOOOOOOOOO
+OOOO
+"""
+
+Scenario: After midnight 03:00:00
+When the time is "03:00:00"
+Then the clock should look like
+"""
+Y
+OOOO
+RRRO
+OOOOOOOOOOO
+OOOO
+"""
+
+Scenario: After midnight 04:00:00
+When the time is "04:00:00"
+Then the clock should look like
+"""
+Y
+OOOO
+RRRR
+OOOOOOOOOOO
+OOOO
+"""
+
+Scenario: Quarter after midnight
+When the time is "00:15:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+YYROOOOOOOO
+OOOO
+"""
+
+Scenario: Half an hour after midnight
+When the time is "00:30:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+YYRYYROOOOO
+OOOO
+"""
+
+Scenario: Last quarter of midnight
+When the time is "00:45:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+YYRYYRYYROO
+OOOO
+"""
+
+Scenario: One minute after midnight
+When the time is "00:01:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+YOOO
+"""
+
+Scenario: Two minutes after midnight
+When the time is "00:02:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+YYOO
+"""
+
+Scenario: Three minutes after midnight
+When the time is "00:03:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+YYYO
+"""
+
+Scenario: Four minutes after midnight
+When the time is "00:04:00"
+Then the clock should look like
+"""
+Y
+OOOO
+OOOO
+OOOOOOOOOOO
+YYYY
+"""
+
+Scenario: Morning 07:22:02
+When the time is "07:22:02"
+Then the clock should look like
+"""
+Y
+ROOO
+RROO
+YYRYOOOOOOO
+YYOO
+"""
