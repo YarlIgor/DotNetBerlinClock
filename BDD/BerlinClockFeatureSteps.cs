@@ -1,6 +1,6 @@
 ﻿using System;
-using TechTalk.SpecFlow;
 using NUnit.Framework;
+using TechTalk.SpecFlow;
 
 namespace BerlinClock
 {
@@ -21,6 +21,13 @@ namespace BerlinClock
         public void ThenTheClockShouldLookLike(string theExpectedBerlinClockOutput)
         {
             Assert.That(_berlinClock.convertTime(_inputTime), Is.EqualTo(theExpectedBerlinClockOutput));
+        }
+
+        [Then(@"the user should see an error message ""(.*)""")]
+        public void ThenTheUserShouldSeeAnError(string errorMessage)
+        {
+            var exception =Assert.Throws<BerlinClockInputTimeFormatException>(() =>_berlinClock.convertTime(_inputTime));
+            Assert.That(exception.Message, Is.EqualTo(errorMessage));
         }
     }
 }
