@@ -68,3 +68,18 @@ Examples:
 | "13:17:01" | "O RROO RRRO YYROOOOOOOO YYOO" |
 | "23:59:59" | "O RRRR RRRO YYRYYRYYRYY YYYY" |
 | "24:00:00" | "Y RRRR RRRR OOOOOOOOOOO OOOO" |
+
+
+Scenario Outline: Incorrect time format
+When the time is <time>
+Then the user should see an error message "BerlinClock input time could be 24:00:00 or HH:mm:ss. Please specify time in the correct format."
+
+Examples: 
+| time       |
+| "1:00:00"  |
+| "01:2:00"  |
+| "01:02:3"  |
+| "1:2:3"    |
+| "24:00:01" |
+| "24:34:56" |
+| "24:59:59" |
